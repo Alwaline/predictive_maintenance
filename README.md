@@ -15,8 +15,9 @@
 
 # Метрики
 
-# Ноутбук для экспериментов
-[EDA.ipynb](notebooks/EDA.ipynb)
+# Ноутбуки
+- Основной [EDA.ipynb](notebooks/EDA.ipynb)
+- Baseline [crude_data.ipynb](notebooks/crude_data.ipynb)
 
 # Источники
 Lindgren, T., Steinert, O., Andersson Reyna, O., Kharazian, Z., & Magnússon, S. (2025). \
