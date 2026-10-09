@@ -11,6 +11,7 @@
 - (в будущем будет доработано)
 
 # Используемые технологии
+- python-3.12
 
 # Архитектура
 
@@ -31,6 +32,30 @@ git clone https://git.kpfu.ru/AGaniev/predictive_maintenance.git
 ```shell
 cd predictive_maintenance
 ```
+
+Установка зависимостей:\
+**venv**:
+```shell
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+**uv**:
+```shell
+uv venv
+uv pip install -r requirements.txt
+```
+
+**conda**:
+```shell
+conda create -n venv python-3.12
+conda activate venv
+pip install -r requirements.txt
+```
+
+Так же могут понадобиться библиотеки `ipykernel` и `jupyter`.
+
 
 Запустить скрипт загрузки датасета:
 ```shell
