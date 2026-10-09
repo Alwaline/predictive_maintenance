@@ -12,12 +12,32 @@
 # Структура проекта
 
 # Запуск
+Клонировать репозиторий (github):
+```shell
+git clone https://github.com/Alwaline/predictive_maintenance.git
+```
+
+Клонировать репозиторий (kpfu.git):
+```shell
+git clone https://git.kpfu.ru/AGaniev/predictive_maintenance.git
+```
+
+Перейти в каталог репозитория:
+```shell
+cd predictive_maintenance
+```
+
+Запустить скрипт загрузки датасета:
+```shell
+python src/load.py
+```
 
 # Метрики
 
 # Ноутбуки
-- Основной [EDA.ipynb](notebooks/EDA.ipynb)
-- Baseline [crude_data.ipynb](notebooks/crude_data.ipynb)
+- EDA [EDA.ipynb](notebooks/EDA.ipynb)
+- Моделирование [modeling.ipynb](notebooks/modeling.ipynb)
+- ~~- Baseline [crude_data.ipynb](notebooks/crude_data.ipynb)~~
 
 # Источники
 Lindgren, T., Steinert, O., Andersson Reyna, O., Kharazian, Z., & Magnússon, S. (2025). \
