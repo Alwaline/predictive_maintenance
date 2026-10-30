@@ -70,7 +70,7 @@ pip install -r requirements.txt
 
 Запустить скрипт загрузки датасета:
 ```shell
-python src/load.py
+python src/data.py
 ```
 
 # Метрики
