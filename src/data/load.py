@@ -56,10 +56,23 @@ def load_split(split):
     if split not in ["train", "validation", "test"]:
         raise ValueError("Split must be one of 'train', 'validation' or 'test'")
 
-    return (
-        pd.read_csv(pathlib.Path(DATA_DIR, file))
-        for file in DATA_FILES[split]
-    )
+    data_frames = []
+
+    for file in DATA_FILES[split]:
+        df = pd.read_csv(pathlib.Path(DATA_DIR, file))
+        if "vehicle_id" in df.columns and "time_step" in df.columns:
+            df.sort_values(["vehicle_id", "time_step"], inplace=True)
+        data_frames.append(df)
+
+    return data_frames
+
+
+def load_flattened_data(split):
+    df_opr, df_spec, df_labels = load_split(split)
+    df = pd.merge(df_opr, df_spec, how="left", on="vehicle_id")
+    df = pd.merge(df, df_labels, how="left", on="vehicle_id")
+    return df
+
 
 if __name__ == "__main__":
     download_data()
